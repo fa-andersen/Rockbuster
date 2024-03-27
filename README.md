@@ -33,6 +33,6 @@ Based on the analysis, I formulated recommendations to guide Rockbuster's transi
 ● MS Word: for creating a data dictionary to facilitate understanding of the dataset.
 
 ## Additional resources and links
-[Rockbuster Data Dictionary](
+[Rockbuster Data Dictionary](https://github.com/fa-andersen/Rockbuster/blob/main/3.10%20Rockbuster%20Data%20Dictionary.pdf)
 
 [Rockbuster visualizations on Tableau](https://public.tableau.com/shared/GWTKQYH3B?:display_count=n&:origin=viz_share_link)

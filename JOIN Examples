@@ -1,0 +1,64 @@
+# Selecting the Top 5 customers based on the top 5 cities within the top 5 countries (CTE)
+
+WITH TopCountries AS	
+	(Select D.country
+	FROM customer A
+	 INNER JOIN address B ON A.address_id = B.address_id
+	 INNER JOIN city C ON B.city_id = C.city_id
+	 INNER JOIN country D ON C.country_id = D.country_id
+	 GROUP BY D.country
+	 ORDER BY COUNT(A.customer_id) DESC
+	 LIMIT 10),
+	 TopCities AS
+	 
+	FROM customer A
+	 INNER JOIN address B ON A.address_id = B.address_id
+	 INNER JOIN city C ON B.city_id = C.city_id
+	 INNER JOIN country D ON C.country_id = D.country_id
+	 WHERE D.country IN (SELECT country FROM TopCountries)
+	 GROUP BY C.city
+	 ORDER BY COUNT(A.customer_id) DESC
+	 LIMIT 10
+	
+SELECT B.customer_id,	
+	   B.first_name,
+	   B.last_name,
+	   E.country,
+	   D.city,
+	   SUM(A.amount) AS total_amount_paid
+FROM payment A	
+INNER JOIN customer B ON A.customer_id = B.customer_id	
+INNER JOIN address C ON B.address_id = C.address_id	
+INNER JOIN city D ON C.city_id = D.city_id	
+INNER JOIN country E ON D.country_id = E.country_id	
+WHERE E.country IN (SELECT country FROM TopCountries)	
+ AND D.city IN (SELECT city FROM TopCities)	
+GROUP BY B.customer_id,	
+	   B.first_name,
+	   B.last_name,
+	   E.country,
+	   D.city
+ORDER BY total_amount_paid DESC	
+LIMIT 5;
+
+
+# Number of times a movie was rented based on country, genre, rental_rate, & total revenue
+SELECT J.country,
+   	   F.name AS genre,
+   	   E.rental_rate,
+    SUM(A.amount) AS total_revenue,
+    COUNT(E.title) AS total_times_rented
+FROM payment A
+    INNER JOIN rental B ON A.rental_id = B.rental_id
+    INNER JOIN inventory C ON B.inventory_id = C.inventory_id
+    INNER JOIN film E ON C.film_id = E.film_id
+    INNER JOIN film_category D ON E.film_id = D.film_id
+    INNER JOIN category F ON D.category_id = F.category_id
+    INNER JOIN customer G ON A.customer_id = G.customer_id
+    INNER JOIN address H ON G.address_id = H.address_id
+	INNER JOIN city I on H.city_id = I.city_id
+	INNER JOIN country J on I.country_id = J.country_id
+GROUP BY J.country,
+   	     F.name,
+  	     E.rental_rate
+ORDER BY  total_revenue DESC;

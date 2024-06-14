@@ -5,6 +5,11 @@ In this project, I analyzed and reviewed Rockbuster sales and customers. Looking
 ## Objective
 The objective of this project is to analyze and review Rockbuster sales and customers to suggest a business strategy for transitioning from in-person video rental stores to an online movie rental service.
 
+## Visualizations & Data Dictionary
+[Rockbuster Data Dictionary](https://github.com/fa-andersen/Rockbuster/blob/main/3.10%20Rockbuster%20Data%20Dictionary.pdf)
+
+[Rockbuster visualizations on Tableau](https://public.tableau.com/shared/GWTKQYH3B?:display_count=n&:origin=viz_share_link)
+
 ## Key Questions
 1. Which movies contributed the most/least to revenue gain?
 2. What was the average rental duration for all videos?
@@ -31,8 +36,3 @@ Based on the analysis, I formulated recommendations to guide Rockbuster's transi
 ● Excel: for documenting technical details of queries and analysis.
 
 ● MS Word: for creating a data dictionary to facilitate understanding of the dataset.
-
-## Additional resources and links
-[Rockbuster Data Dictionary](https://github.com/fa-andersen/Rockbuster/blob/main/3.10%20Rockbuster%20Data%20Dictionary.pdf)
-
-[Rockbuster visualizations on Tableau](https://public.tableau.com/shared/GWTKQYH3B?:display_count=n&:origin=viz_share_link)

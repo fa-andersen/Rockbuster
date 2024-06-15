@@ -1,14 +1,15 @@
 # Rockbuster Sales and Customer Analysis
 
-In this project, I analyzed and reviewed Rockbuster sales and customers. Looking to uncover insights about movies, customer habits, and pricing strategies.
-
-## Objective
-The objective of this project is to analyze and review Rockbuster sales and customers to suggest a business strategy for transitioning from in-person video rental stores to an online movie rental service.
-
 ## Visualizations & Data Dictionary
 [Rockbuster Data Dictionary](https://github.com/fa-andersen/Rockbuster/blob/main/3.10%20Rockbuster%20Data%20Dictionary.pdf)
 
 [Rockbuster visualizations on Tableau](https://public.tableau.com/shared/GWTKQYH3B?:display_count=n&:origin=viz_share_link)
+
+## Introduction
+In this project, I analyzed and reviewed Rockbuster sales and customers. Looking to uncover insights about movies, customer habits, and pricing strategies.
+
+## Objective
+The objective of this project is to analyze and review Rockbuster sales and customers to suggest a business strategy for transitioning from in-person video rental stores to an online movie rental service.
 
 ## Key Questions
 1. Which movies contributed the most/least to revenue gain?
